@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>video</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <section class="showcase">
+        <header>
+            <h2 class="logo">HYS</h2>
+            <div class="toggle"></div>
+        </header>
+        <video src="img/glow text2.mp4" muted loop autoplay></video>
+        <div class="overlay"></div>
+        <div class="text">
+            <!-- <h2>Never stop To</h2>
+            <h3>Exploring The World</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae natus corrupti, dolorem reprehenderit iure, 
+                recusandae quod blanditiis facilis deserunt quae rem sit veritatis culpa est aliquam atque ex maiores vel!</p>
+            <a href="#">Explore</a> -->
+        </div>
+
+        <!-- <ul class="social">
+            <li><a href="#"><img src="img/facebook.png" alt="face"></a></li>
+            <li><a href="#"><img src="img/instagram.png" alt="insta"></a></li>
+            <li><a href="#"><img src="img/twitter.png" alt="twit"></a></li>
+        </ul>
+         -->
+    </section>
+    <div class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about me/index.html">about me</a></li>
+            <li><a href="character/index2.html">character</a></li>
+            <li><a href="graphic design/index.html">graphic design</a></li>
+            <li><a href="video gallery/index.html">video</a></li>
+        </ul>
+    </div>
+    <script>
+        const menuToggle = document.querySelector('.toggle');
+        const showcase = document.querySelector('.showcase');
+        menuToggle.addEventListener('click', () => {
+            menuToggle.classList.toggle('active');
+            showcase.classList.toggle('active');
+        })
+    </script>
+</body>
+
+</html>

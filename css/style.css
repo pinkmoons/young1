@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between; /*사이에 공간을 주는 것*/
+    align-items: center;
+    z-index: 1000;
+}
+header .logo{
+    color: #fff;
+    text-transform: uppercase; /*전부대문자로*/
+    cursor: pointer; /*마우스 올렸을 때 손모양으로 바뀜*/
+}
+.toggle{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    background: url(https://i.ibb.co/HrfVRcx/menu.png);
+    background-repeat: no-repeat;
+    background-size: 30px;     /*toggle 이미지 자체의 크기*/
+    background-position: center;
+    cursor: pointer;
+    
+}
+.toggle.active{
+    background:url(https://i.ibb.co/rt3HybH/close.png);
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position: center;
+    cursor: pointer; 
+}
+.showcase{
+    position: absolute;
+    right: 0;
+    width: 100%;
+    min-height: 100vh;/*부모랑 상관없이 단독으로 크기*/
+    padding: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+    transition: 0.5s;
+    z-index: 2; /*상위 위아래 지정할때 */
+}
+.showcase video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*object 에 전체 다차게*/
+    opacity: 0.8;
+}
+.showcase.active{
+    right: 300px;
+}
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #e2798b;
+    mix-blend-mode: overlay;
+}
+.text{
+    position: relative;
+    z-index: 10;
+}
+.text h2{
+    font-size: 5em;
+    font-weight: 800;
+    color: #fff;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+.text h3{
+    font-size: 4em;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1em;
+    text-transform: uppercase;
+}
+.text p{
+    font-size: 1.1em;
+    color: #fff;
+    margin: 20px 0;
+    font-weight: 400;
+    max-width: 700px;
+}
+.text a{
+    font-size: 1em;
+    background: #fff;
+    padding: 10px 30px;
+    text-transform: uppercase;
+    text-decoration: none; /*밑줄없애는것*/
+    font-weight: 500;
+    margin-top: 10px;
+    color: #111;
+    letter-spacing: 2px;/*글자사이 간격*/
+    transition: 0.2s;
+}
+.text a:hover{
+    letter-spacing: 6px;
+}
+.social{
+    position: absolute;
+    z-index: 10;
+    bottom: 20px;
+    display: flex; /*옆으로 나열됨*/
+    justify-content: center;
+    align-items: center;
+}
+
+.social li{
+    list-style: none;
+    
+}
+.social li a{
+    display: inline-block;
+    margin-right: 20px;
+    filter: invert(1);
+    transform: scale(0.5);
+    transition: 0.5s;
+    
+}
+.social li a:hover{
+    transform: scale(0.5) translateY(-15px);
+}
+.menu{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffe9e4;
+}
+.menu ul{
+    position: relative;
+}
+.menu ul li{
+    list-style: none;
+}
+.menu ul li a{
+    text-decoration: none; /*밑줄 없애 주는 것*/
+    font-size: 24px;
+    color: rgb(241, 110, 121);
+}
+.menu ul li a:hover{
+    color: #a803f4;
+}
+
+
+@media screen and (max-width: 768px) 
+{
+    .toggle.active{
+        background:url(https://i.ibb.co/rt3HybH/close.png);
+        background-repeat: no-repeat;
+        background-size: 25px;
+        background-position: center;
+        padding-left: 350px;
+        cursor: pointer; 
+    } 
+    
+    .showcase video{
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover; /*object 에 전체 다차게*/
+        opacity: 0.8;
+    }
+}
